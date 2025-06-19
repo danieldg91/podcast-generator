@@ -12,13 +12,13 @@ with open ('feed.yaml', 'r') as file:
         'xmlns:content':'http://purl.org/rss/1.0/modules/content/'
     }) 
 
-#channel goes inside the rss element, this only creates a tag
+#channel goes inside the rss element, this only creates a channel tag
 channel_element = xml_tree.SubElement(rss_element, 'channel') 
 
 #link holds github page url (Repo > Settings > Pages)
 link_prefix = yaml_data['link']
 
-#inside the channel tag create a title tag to write the contents from the feed.yaml file
+#inside the channel tag create tags to write the contents from the feed.yaml (yaml_data) file
 xml_tree.SubElement(channel_element, 'title').text = yaml_data['title']
 xml_tree.SubElement(channel_element, 'format').text = yaml_data['format']
 xml_tree.SubElement(channel_element, 'subtitle').text = yaml_data['subtitle']
