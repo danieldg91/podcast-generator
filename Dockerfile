@@ -1,5 +1,5 @@
 #steps for creating a virtual machine + cmds allowing to install things on the machine.
-FROM ubuntu:latest 
+FROM ubuntu:22.04 
 
 RUN apt-get update && apt-get install -y \
     python3.10 \
